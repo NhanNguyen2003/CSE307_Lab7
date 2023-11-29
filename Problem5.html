@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem5</title>
+    <link rel="stylesheet" href="style5.css">
+    <script>
+        function showAlert() {
+            var alertBox = document.getElementById('myAlert');
+            alertBox.style.display = 'block';
+            setTimeout(function () {
+                closeAlert();
+            }, 5000);
+        }
+
+        function closeAlert() {
+            var alertBox = document.getElementById('myAlert');
+            alertBox.style.display = 'none';
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="alert" id="myAlert">
+        <p> 
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </p>
+        <p> 
+            <strong>Success!</strong> Indicates a successful or positive action.
+        </p>
+        <p>
+            <strong>Info!</strong> Indicates a neutral informative change or action.
+        </p>
+        <p> 
+            <strong>Warning!</strong> Indicates a warning that might need attention.
+        </p>
+    </div>
+    <input type="button" value="X" onclick="showAlert()">
+</body>

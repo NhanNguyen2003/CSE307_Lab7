@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem4</title>
+    <link rel="stylesheet" href="style4.css">
+    <script>
+        function expandImage(image) {
+            var expandedImage = document.getElementById('expandedImage');
+            var expandedImageElement = document.getElementById('expandedImg');
+
+            expandedImageElement.src = image;
+            expandedImage.style.display = 'flex';
+        }
+
+        function collapseImage() {
+            var expandedImage = document.getElementById('expandedImage');
+            expandedImage.style.display = 'none';
+        }
+    </script>
+
+</head>
+
+<body>
+    <center>
+        <h1>Tabbed Image Gallery</h1>
+        <p>Click on the images below</p>
+        <div class="image">
+            <input type="image" name="" id="" src="img/BARC.png" style="width: 20%; height: 10%;"
+                onclick="expandImage('img/BARC.png')">
+            <input type="image" name="" id="" src="img/Davinci.png" style="width: 20%; height: 10%;"
+                onclick="expandImage('img/Davinci.png')">
+            <input type="image" name="" id="" src="img/harrypotter.png" style="width: 20%; height: 10%;"
+                onclick="expandImage('img/harrypotter.png')">
+            <input type="image" name="" id="" src="img/VisualBasic.png" style="width: 20%; height: 10%;"
+                onclick="expandImage('img/VisualBasic.png')">
+
+        </div>
+
+
+        <div id="expandedImage" onclick="collapseImage()">
+            <img src="" alt="Expanded Image" id="expandedImg">
+        </div>
+    </center>
+</body>

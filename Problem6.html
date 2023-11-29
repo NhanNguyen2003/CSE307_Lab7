@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Problem6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style6.css">
+
+    <script>
+        function validate() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var pass = document.getElementById('pass').value;
+            var confirm = document.getElementById('confirm').value;
+
+
+            if (name.trim() === '') {
+                document.getElementById('nameError').innerHTML = 'Please input your name';
+            } else {
+                document.getElementById('nameError').innerHTML = '';
+            }
+
+            if (email.trim() === '') {
+                document.getElementById('emailError').innerHTML = 'Please input your email';
+            } else {
+                document.getElementById('emailError').innerHTML = '';
+            }
+
+            if (pass.trim() === '') {
+                document.getElementById('passError').innerHTML = 'Please input your password ';
+            } else if (pass.length > 6) {
+                document.getElementById('passError').innerHTML = 'Please input your password (min-length = 6)';
+            } else{
+                document.getElementById('passError').innerHTML = '';
+            }
+
+            if (confirm.trim() === '') {
+                document.getElementById('confError').innerHTML = 'Please input your password';
+            } else if(confirm.trim() === pass) {
+                document.getElementById('confError').innerHTML = '';
+            } else {
+                document.getElementById('confError').innerHTML = 'It does not match your password';
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form name="Register Form" method="post">
+        <table border="1">
+            <tr>
+                <td><b>Full Name</b></td>
+                <td><input type="text" name="FullName" size="50" placeholder="Enter your name" id="name"> <span
+                        id="nameError" class="error"></span></td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td><input type="text" name="Email" size="50" placeholder="Enter your email" id="email"><span
+                        id="emailError" class="error"></span></td>
+            </tr>
+            <tr>
+                <td><b>Password</b></td>
+                <td><input type="password" name="pass" size="50" placeholder="Enter your pass" id="pass"><span
+                        id="passError" class="error"></td>
+            </tr>
+            <tr>
+                <td><b>Confirm Password</b></td>
+                <td><input type="password" name="Confirm" size="50" id="confirm"><span
+                    id="confError" class="error"></td>
+            </tr>
+            <tr>
+                <td><b>Phone Number</b></td>
+                <td><input type="text" name="Phone" id="" size="50" placeholder="Enter your phone number"></td>
+            </tr>
+            <tr>
+                <td><b>Address</b></td>
+                <td><textarea name="Address" id="" cols="50" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td><b>City</b></td>
+                <td><input type="text" placeholder="Enter your city" name="City"><a><b>State</b></a> <input type="text"
+                        placeholder="Enter your state" name="State"></td>
+
+            </tr>
+            <tr>
+                <td><b>Zip/Postal Code</b></td>
+                <td><input type="text" placeholder="Enter Zip/Postal Code " name="Zip" size="50"></td>
+            </tr>
+            <tr>
+                <td><b>Country</b></td>
+                <td><select name="Country" id="">
+                        <Option value="Value 1" selected="selected">VietNam</Option>
+                        <option value="Value 2">US</option>
+                        <option value="Value 3">UK</option>
+                        <option value="Value 4">Japan</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><b>Birthday</b></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><b>Gender</b></td>
+                <td><select name="Gender" id="">
+                        <option value="Value 1" selected="selected">Female</option>
+                        <option value="Value 2">Male</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><b>Starting date</b></td>
+                <td><input type="radio" name="date" value="Spring"><label for="">Spring</label> <input type="radio"
+                        name="date" value="Summer" checked><label for="">Summer</label></td>
+            </tr>
+            <tr>
+                <td><b>Comments</b></td>
+                <td><textarea name="Comments" placeholder="Please send us more information" id="" cols="30"
+                        rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2 ">
+                    <center><input type="button" value="Submit" onclick="validate()" id=""></center>
+                </td>
+            </tr>
+
+        </table>
+
+
+
+    </form>
+</body>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem2</title>
+    <script>
+        function change() {
+            const p1 = document.querySelector('.example');
+            p1.style="font-size: larger; color: green;background-color: green;color: red;width: fit-content;"
+
+            const p3 = document.querySelector('.a3');
+            p3.style="border: 1px solid red";
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <p class="example" style="background-color: aqua;width: fit-content; color: green;">This is the first paragraph with class "example".</p>
+            </li>
+            <li>
+                <p class="example2">This is another paragraph.</p>
+            </li>
+            <li><a href="#" class="a3">Link with target attribute</a></li>
+
+        </ul>
+    </div>
+    <input type="button" name="" id="change" value="Change" onclick="change()">
+</body>

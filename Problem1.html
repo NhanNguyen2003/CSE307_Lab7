@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem1</title>
+    <script>
+        function change() {
+            const web1 = document.querySelector('.a1');
+            const href1 = "https://www.youtube.com/";
+            web1.setAttribute('href',href1);
+            const web2 = document.querySelector('.a2');
+            const href2 = "https://www.youtube.com/";
+            web2.setAttribute('href',href2);
+            const web3 = document.querySelector('.a3');
+            const href3 = "https://www.youtube.com/";
+            web3.setAttribute('href',href3);
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Replace all href value</h1>
+    <div>
+        <ul>
+            <li><a href="#" class="a1">Website 1</a></li>
+            <li><a href="#" class="a2">Website 2</a></li>
+            <li><a href="#" class="a3">Website 3</a></li>
+        </ul>
+    </div>
+    <input type="button" name="" id="change" value="Change" onclick="change()">
+</body>

@@ -1,0 +1,16 @@
+.alert {
+    display: none;
+    padding: 15px;
+    border: 1px solid #d9534f;
+    border-radius: 4px;
+    color: #d9534f;
+    background-color: #f2dede;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+.close {
+    cursor: pointer;
+}

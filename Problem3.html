@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Problem3</title>
+    <script>
+        function change() {
+            var p1 = document.querySelectorAll('.example');
+            p1.forEach(function (element) {
+                element.style = "background-color: black; color: white;width: fit-content;";
+            });
+
+            var p2 = document.querySelectorAll('.a1');
+            p2.forEach(function (element) {
+                element.style = "border: 1px solid red;";
+            });
+
+            var p3 = document.querySelectorAll('.h1');
+            p3.forEach(function (element) {
+                element.style = "color: yellow;";
+            });
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="example1">
+        <p class="example"> This is a paragraph with class "example".</p>
+        <div class="example">Another paragraph with class "example".</div>
+
+    </div>
+
+    <div class="link1">
+        <a href="#" class="a1">Link with target attribute</a><br>
+        <a href="#" class="a1">Another link with target attribute</a>
+
+    </div>
+
+    <div class="title1">
+        <h1 class="h1">Title 1</h1>
+        <h2 class="h1">Title 2</h2>
+
+    </div>
+    <input type="button" name="" id="change" value="Change" onclick="change()">
+</body>
